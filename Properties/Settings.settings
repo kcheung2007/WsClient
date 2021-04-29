@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WsClient.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DataFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\wsMails\msgMail</Value>
+    </Setting>
+    <Setting Name="StoreFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\tmpStore</Value>
+    </Setting>
+    <Setting Name="zdkFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\tmp\zKey.txt</Value>
+    </Setting>
+    <Setting Name="WsServer_URL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://10.1.41.102:81/nexch/services/ZANTAZ_StoreAndRetrieveService</Value>
+    </Setting>
+    <Setting Name="CertSubjectName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C=US,S=California,L=San Francisco,O=Autonomy,OU=SE,CN=SE,E=sam.yan@autonomy.com</Value>
+    </Setting>
+    <Setting Name="DataFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Z:\WorkingFolder\ALL\ALL_1.EML</Value>
+    </Setting>
+    <Setting Name="MdeFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Z:\WorkingFolder\mde\mde0.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+		<section name="microsoft.web.services2" type="Microsoft.Web.Services2.Configuration.WebServicesConfiguration, Microsoft.Web.Services2, Version=2.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="WsClient.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" />
+        </sectionGroup>
+    </configSections>
+    <userSettings>
+        <WsClient.Properties.Settings>
+            <setting name="DataFolder" serializeAs="String">
+                <value>D:\wsMails\msgMail</value>
+            </setting>
+            <setting name="StoreFolder" serializeAs="String">
+                <value>D:\tmpStore</value>
+            </setting>
+            <setting name="zdkFile" serializeAs="String">
+                <value>D:\tmp\zKey.txt</value>
+            </setting>
+            <setting name="DataFile" serializeAs="String">
+                <value>D:\tmp\test.msg</value>
+            </setting>
+            <setting name="WsDime_URL" serializeAs="String">
+                <value>http://10.1.34.90/axis/services/ZANTAZ_DIMEStoreAndRetrieveService</value>
+            </setting>
+            <setting name="WsServer_URL" serializeAs="String">
+                <value>http://10.1.41.102/nexch/services/ZANTAZ_StoreAndRetrieveService</value>
+            </setting>
+        </WsClient.Properties.Settings>
+    </userSettings>
+	<microsoft.web.services2>
+		<messaging>
+			<maxRequestLength>5000000</maxRequestLength>
+		</messaging>
+		<diagnostics>
+			<policyTrace enabled="false" />
+			<detailedErrors enabled="false" />
+			<trace enabled="false" />
+		</diagnostics>
+	</microsoft.web.services2>
+</configuration>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="WsClient.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <userSettings>
+        <WsClient.Properties.Settings>
+            <setting name="WsServer_URL" serializeAs="String">
+                <value>http://10.1.41.51/nexch/services/ZANTAZ_StoreAndRetrieveService</value>
+            </setting>
+            <setting name="DataFolder" serializeAs="String">
+                <value>D:\wsMails\msgMail</value>
+            </setting>
+            <setting name="StoreFolder" serializeAs="String">
+                <value>D:\tmpStore</value>
+            </setting>
+            <setting name="MailboxID" serializeAs="String">
+                <value>mailboxID-123</value>
+            </setting>
+            <setting name="FolderID" serializeAs="String">
+                <value>folderID-987</value>
+            </setting>
+            <setting name="zdkFile" serializeAs="String">
+                <value>D:\tmp\zKey.txt</value>
+            </setting>
+            <setting name="DataFile" serializeAs="String">
+                <value>D:\tmp\test.msg</value>
+            </setting>
+        </WsClient.Properties.Settings>
+    </userSettings>
+</configuration>

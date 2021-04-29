@@ -1,0 +1,384 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50456F9F-7271-4A6C-B463-9DFAB3A652E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WsClient</RootNamespace>
+    <AssemblyName>WsClient</AssemblyName>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <StartupObject>WsClient.Program</StartupObject>
+    <PublishUrl>http://localhost/WsClient/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FxCopRules>
+    </FxCopRules>
+    <RunFxCop>false</RunFxCop>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRules>-Microsoft.Design#CA1031;-Microsoft.Globalization#CA1302;-Microsoft.Naming#CA1702;-Microsoft.Naming#CA1700;-Microsoft.Naming#CA1712;-Microsoft.Naming#CA1713;-Microsoft.Naming#CA1714;-Microsoft.Naming#CA1709;-Microsoft.Naming#CA1704;-Microsoft.Naming#CA1708;-Microsoft.Naming#CA1715;-Microsoft.Naming#CA1710;-Microsoft.Naming#CA1720;-Microsoft.Naming#CA1707;-Microsoft.Naming#CA1722;-Microsoft.Naming#CA1711;-Microsoft.Naming#CA1716;-Microsoft.Naming#CA1717;-Microsoft.Naming#CA1725;-Microsoft.Naming#CA1719;-Microsoft.Naming#CA1721;-Microsoft.Naming#CA1701;-Microsoft.Naming#CA1703;-Microsoft.Naming#CA1724;-Microsoft.Naming#CA1726;-Microsoft.Performance#CA1822</CodeAnalysisRules>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExpandableGridView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExpandableGridView\ExpandableGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SharpZipLib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Domino, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>obj\Interop.Domino.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>obj\Release\Microsoft.Office.Interop.Outlook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Outlook, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Services2, Version=2.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>obj\Microsoft.Web.Services2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tamir.SharpSSH, Version=1.1.1.13, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SharpSSH\Tamir.SharpSSH.dll</HintPath>
+    </Reference>
+    <Reference Include="WatiN.Core, Version=1.3.0.4000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\WatiN\1.3.0-net-2.0\bin\WatiN.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttachObj.cs" />
+    <Compile Include="ClientCertObj.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="FilesListObj.cs" />
+    <Compile Include="LdapDataObj.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MdeDataObj.cs" />
+    <Compile Include="olMailObj.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcArchive.resx">
+      <DependentUpon>UcArchive.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcDSTest.resx">
+      <DependentUpon>UcDSTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcMailClient.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcMailClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcExplorer.resx">
+      <DependentUpon>UcExplorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcMailCounter.resx">
+      <DependentUpon>UcMailCounter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcMailSender.resx">
+      <DependentUpon>UcMailSender.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcMonitor.resx">
+      <DependentUpon>UcMonitor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcNotepad.resx">
+      <DependentUpon>UcNotepad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcPowerTool.resx">
+      <DependentUpon>UcPowerTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcRetrieve.resx">
+      <DependentUpon>UcRetrieve.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcSetEmlDate.resx">
+      <DependentUpon>UcSetEmlDate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcSimpleTest.resx">
+      <DependentUpon>UcSimpleTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcSshCmd.resx">
+      <DependentUpon>UcSshCmd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcWebSearch.resx">
+      <DependentUpon>UcWebSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcZAPIs.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcZAPIs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcZDlls.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcZDlls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinGenAddrData.resx">
+      <DependentUpon>WinGenAddrData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinGenDXLData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WinGenDXLData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinGenLdifData.resx">
+      <DependentUpon>WinGenLdifData.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RandomPassword.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SMTPSender.cs" />
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraceExtension.cs" />
+    <Compile Include="UcArchive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcArchive.Designer.cs">
+      <DependentUpon>UcArchive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcDSTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcDSTest.Designer.cs">
+      <DependentUpon>UcDSTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcMailClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcMailClient.Designer.cs">
+      <DependentUpon>UcMailClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcExplorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcExplorer.Designer.cs">
+      <DependentUpon>UcExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcMailCounter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcMailCounter.Designer.cs">
+      <DependentUpon>UcMailCounter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcMailSender.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcMailSender.Designer.cs">
+      <DependentUpon>UcMailSender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcMonitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcMonitor.Designer.cs">
+      <DependentUpon>UcMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcNotepad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcNotepad.Designer.cs">
+      <DependentUpon>UcNotepad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcPowerTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcPowerTool.Designer.cs">
+      <DependentUpon>UcPowerTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcRetrieve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcRetrieve.Designer.cs">
+      <DependentUpon>UcRetrieve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcSetEmlDate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcSetEmlDate.Designer.cs">
+      <DependentUpon>UcSetEmlDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcSimpleTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcSimpleTest.Designer.cs">
+      <DependentUpon>UcSimpleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcSshCmd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcSshCmd.Designer.cs">
+      <DependentUpon>UcSshCmd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcWebSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcWebSearch.Designer.cs">
+      <DependentUpon>UcWebSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcZAPIs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcZAPIs.Designer.cs">
+      <DependentUpon>UcZAPIs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcZDlls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcZDlls.Designer.cs">
+      <DependentUpon>UcZDlls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPreference.cs" />
+    <Compile Include="Win32API.cs" />
+    <Compile Include="WinGenAddrData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinGenAddrData.Designer.cs">
+      <DependentUpon>WinGenAddrData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinGenDXLData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinGenDXLData.Designer.cs">
+      <DependentUpon>WinGenDXLData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinGenLdifData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinGenLdifData.Designer.cs">
+      <DependentUpon>WinGenLdifData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZANTAZ_StoreAndRetrieveService.cs" />
+    <Compile Include="ZDllWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ZIStreamWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Splash32.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
