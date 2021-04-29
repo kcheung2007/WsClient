@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-8"?><InitData><combobox name="cboFileFrom" /><combobox name="cboTo" /><combobox name="cboCC" /><combobox name="cboBCC" /><combobox name="cboRcptTo" /><combobox name="cboMailFrom" /><combobox name="cboHeader" /><combobox name="cboHeaderVal" /><combobox name="cboSMTP" /><combobox name="cboPort"><entry>25</entry></combobox></InitData>
